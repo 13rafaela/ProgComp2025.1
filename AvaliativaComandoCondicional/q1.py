@@ -1,10 +1,19 @@
-numero = int(input('Digite um número de o á 1000:'))
-if numero > 1000:
-    print('numero inválido!')
-else:
-    mi = numero // 1000
-    cen = (numero % 1000) // 100
-    dez = (numero % 100) // 10
-    uni = numero % 10
-    soma = mi + cen + dez + uni
-    print ( 'A soma dos algarismos é:' , soma)
+num = int(input('Digite um número de 0 á 1000: '))
+while num > 1000:
+    print("Numero inválido!")
+    num = int(input('Digite um número de 0 á 1000: '))
+	
+soma = 0
+algarismo = num
+while algarismo > 0:
+    digito = algarismo % 10 
+    soma += digito 
+    algarismo = algarismo // 10 
+print('A soma dos algarismos é igual a: ', soma)
+
+
+
+
+
+
+
