@@ -1,0 +1,16 @@
+saidaaimplescomstdout =subprocess.run(['ipconfig', '\all'], capture_output=True, text=True).stdout
+
+
+
+linhas = saidaSimplesComStdout.split("\n")
+print(linhas)
+for linha in linhas:
+if 'IPv4 in linha:
+print(linha.split": "[1]) ou print(linha.split(":")"[1]"[1: ])
+
+
+
+exercicio:
+bigcharts = [ lista com alfabetos com 16 linhas com letras grandes e numeros ate o 9]
+nome = input...
+printar o nome com as letras grandes
