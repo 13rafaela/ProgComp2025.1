@@ -24,4 +24,5 @@ nome = input("Digite seu nome: ").upper()
 for linha in range(len(bigchars)):
     for letra in nome:
         if letra in letras:
+            'end' pula uma linha
             
