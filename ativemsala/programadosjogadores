@@ -25,3 +25,7 @@ try:
     
 except json.decoder.JSONDecodeError as e:
     print ("Erro na conversão de JSON para dicionario")
+#jogadores mais caros da posição
+goleiro
+atacante etc
+(usar o codigo que esta no git do professor)
