@@ -1,14 +1,27 @@
-import requests
-import json
+import requests, json
 
 try:
-    dados = requests.get("https://api.cartola.globo.com/atletas/mercado").text
-    atletas = json.loads(dados)["atletas"] 
-
-    botafogo = filter (lambda x: x['clube_id'] == 263, atletas)
-
-    jogadorescpreco = []
-    for jogador in botafogo:
-        jogadorescpreco.append((jogador["preco_num"], jogador))
+    usuario = input('digite o nome do clube:').capitalize()#pede para o usuario digitar
+    dados = requests.get("https://api.cartola.globo.com/atletas/mercado").text#encaminha qual site vão ser tirado os dados
+    dados = json.loads(dados)# para transformar em dicionario
+    atletas = dados["atletas"]#pega os atletas e tranforma numa lista
+    posicoes = dados["posicoes"]#pega as posições dos jogadores e transforma numa lista
+    
+    usuario =[]#coloca o que o usuario digitou e coloca numa lista vazia
+    for atleta in atletas:#
+        if atleta["nome_fantasia"] == usuario: 
+            nome_posicao = posicoes[str(atleta["posicao_id"])]["nome"]
+            usuario.append( [ atleta["nome"],
+                               atleta["apelido"],      
+                               nome_posicao,
+                               atleta["preco_num"]
+                             ]
+                            )
+    
+    usuario.sort (key=lambda x: x[3], reverse=True)
+    for atleta in usuario:
+        print (f"{atleta[2]:10s} {atleta[1]:20s} {atleta[3]:5.2f}")
+    
+    
 except json.decoder.JSONDecodeError as e:
     print ("Erro na conversão de JSON para dicionario")
