@@ -1,0 +1,14 @@
+import requests
+import json
+
+try:
+    dados = requests.get("https://api.cartola.globo.com/atletas/mercado").text
+    atletas = json.loads(dados)["atletas"] 
+
+    botafogo = filter (lambda x: x['clube_id'] == 263, atletas)
+
+    jogadorescpreco = []
+    for jogador in botafogo:
+        jogadorescpreco.append((jogador["preco_num"], jogador))
+except json.decoder.JSONDecodeError as e:
+    print ("Erro na conversão de JSON para dicionario")
