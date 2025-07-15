@@ -29,3 +29,4 @@ except json.decoder.JSONDecodeError as e:
 goleiro
 atacante etc
 (usar o codigo que esta no git do professor)
+filtrar por posição
