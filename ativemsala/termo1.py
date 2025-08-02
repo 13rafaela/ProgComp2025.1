@@ -21,10 +21,10 @@ palavras = [
     "TORRE", "TRAJE", "TREVO", "TROCO", "TRONO", "TURMA", "URUBU",
     "VALSA", "VENTO", "VERDE", "VISAO", "VINHO", "VIUVO", "ZEBRA"
 ]
-
-palavra= ['palavra1':palavras,'palavra2':palavras] 
-segredo = random.choice(palavra).upper()
-visivel = '-'* len(palavra)
+palavra = {'palavra1': palavras
+           ,'palavra2:':palavras}
+segredo = random.choice(palavras).upper()
+visivel = "-"*len(segredo)
 tentativas = 7
 while palavras != segredo and tentativas > 0:
     print('------TERMO------')
