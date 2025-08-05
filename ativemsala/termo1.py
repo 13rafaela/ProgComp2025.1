@@ -21,29 +21,20 @@ palavras = [
     "TORRE", "TRAJE", "TREVO", "TROCO", "TRONO", "TURMA", "URUBU",
     "VALSA", "VENTO", "VERDE", "VISAO", "VINHO", "VIUVO", "ZEBRA"
 ]
-palavra = {'palavra1': palavras
-           ,'palavra2:':palavras}
-segredo = random.choice(palavras).upper()
-visivel = "-"*len(segredo)
+palavra1 = random.choice(palavras).upper()
+palavra2 = random.choice (palavras).upper()
 tentativas = 7
-while palavras != segredo and tentativas > 0:
-    print('------TERMO------')
-    print(visivel)
-    palpite = input("Digite a palavra:").upper()
-    if palpite != segredo:   
-        print('por favor, digite apenas letras validas')
-    novavisivel = ''
-    acertou = False
-    for pos in range(len(segredo)):
-        if palpite == segredo[pos]:
-            novavisivel+= segredo[pos]
-            acertou = True
-        else:
-            novavisivel += palavras[pos]
-    if not acertou:
-        tentativas -=1
-        print(f'letra não encontrada! tentativas restantes:{tentativas}')
-    palavraUm = novavisivel
-    palavraDois = novavisivel
-if novavisivel != segredo:
-    ultimachance = input(f'voce errou, a palavra era{segredo}')
+visivel1 = "-"*len(palavra1) 
+visivel2 = "-"*len(palavra2)
+while tentativas > 0:
+    print("T   E   R   M   O")
+    print("-------------------------------------------------------")
+    print(f"\033[32m{visivel1}\033[32m")
+    print(f"\033[32m{visivel2}\033[32m")
+    print("Dica: envolve objetos e animais.")
+    palpite = input("Quais são as palavras?:")
+
+novavisivel= ' '
+for pos in range(len(palavra1, palavra2):
+    novavisivel = 
+    print()
