@@ -1,3 +1,4 @@
+#Pamela e Rafaela
 dados = {}  # Dicionário para armazenar os CPFs e suas listas de MACs
 
 # Validação de CPF
