@@ -1,3 +1,4 @@
+#Pamela e Rafaela
 import random
 
 # Configuração de cores
@@ -117,4 +118,5 @@ while not fimdejogo:
         print("Palavra 1:", ''.join(print1))
         print("Palavra 2:", ''.join(print2))
      
+
    
